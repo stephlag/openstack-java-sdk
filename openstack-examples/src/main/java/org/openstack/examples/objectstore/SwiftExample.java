@@ -21,6 +21,7 @@ import org.openstack.swift.api.CreateContainer;
 import org.openstack.swift.api.DownloadObject;
 import org.openstack.swift.api.ListContainers;
 import org.openstack.swift.api.ListObjects;
+import org.openstack.swift.api.ListObjectsFilter;
 import org.openstack.swift.api.UploadObject;
 import org.openstack.swift.model.ObjectDownload;
 import org.openstack.swift.model.ObjectForUpload;
@@ -61,8 +62,8 @@ public class SwiftExample {
 			upload.setInputStream(new FileInputStream(TEST_FILE));
 			swiftClient.execute(new UploadObject(upload));
 			
-			System.out.println(swiftClient.execute(new ListObjects("navidad2", new HashMap<String, String>() {{
-				put("path", "");
+			System.out.println(swiftClient.execute(new ListObjects("navidad2", new HashMap<ListObjectsFilter, String>() {{
+				put(ListObjectsFilter.Path, "");
 			}})).get(0).getContentType());
 			
 			
