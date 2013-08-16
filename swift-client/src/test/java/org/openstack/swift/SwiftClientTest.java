@@ -7,8 +7,8 @@ import java.util.List;
 import javax.ws.rs.ServerErrorException;
 import javax.ws.rs.core.Response;
 
+import org.junit.Ignore;
 import org.junit.Test;
-import org.openstack.keystone.utils.KeystoneUtils;
 import org.openstack.swift.api.ListContainers;
 import org.openstack.swift.api.ShowAccount;
 import org.openstack.swift.model.Container;
@@ -19,6 +19,7 @@ public class SwiftClientTest {
 
 	
 	@Test
+	@Ignore
 	public void testSwiftClient() {
 		javax.net.ssl.HttpsURLConnection.setDefaultHostnameVerifier(
 			    new javax.net.ssl.HostnameVerifier(){

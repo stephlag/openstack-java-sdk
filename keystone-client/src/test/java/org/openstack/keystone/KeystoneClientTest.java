@@ -2,8 +2,8 @@ package org.openstack.keystone;
 
 import junit.framework.Assert;
 
+import org.junit.Ignore;
 import org.junit.Test;
-import org.openstack.keystone.KeystoneClient;
 import org.openstack.keystone.api.Authenticate;
 import org.openstack.keystone.api.ListTenants;
 import org.openstack.keystone.model.Access;
@@ -17,6 +17,7 @@ import org.openstack.keystone.utils.KeystoneUtils;
 public class KeystoneClientTest {
 
 	@Test
+	@Ignore
 	public void testKeystoneAuth() {
 		KeystoneClient keystone = new KeystoneClient(
 				"http://localhost:5000/v2.0/");
